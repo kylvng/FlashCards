@@ -14,8 +14,11 @@ import coffin from './images/coffin.png'
 
 function App() {
   const [cardIndex, setCardIndex] = useState(0);
+  const [isFlipped, setFlipped] = useState(false);
+
 
   const cardPairs = [
+    { question: "click me", answer: "click button", difficulty: "no me", image: null },
     { question: "What comes once in a minute, twice in a moment, but never in a thousand years?", answer: "The letter 'M'.", difficulty: "easy", image: m}, 
     { question: "I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost every person. What am I?", answer: "Pencil lead.", difficulty: "easy", image: pencil}, 
     { question: "I have keys but open no locks. I have space but no room. You can enter, but you can't go inside. What am I?", answer: "A keyboard.", difficulty: "easy", image: keyboard}, 
@@ -29,25 +32,38 @@ function App() {
   ]
   const len = cardPairs.length;
 
+  const handleCardClick = () => {
+    setFlipped(!isFlipped);
+  };
+
   const nextCard = () => {
-    const newIndex = Math.floor(Math.random() * len);
+    const newIndex = Math.floor(Math.random() * (len - 1)) + 1;
     setCardIndex(newIndex);
-  }
+    setFlipped(false);
+  };
 
   return (
     <div className='App'>
       <div className='textContainer'>
-      <h1>Are You Smarter Than a 5th Grader?</h1>
-      <h5 className='seriously'>... are you?</h5>
-      <h1 style={{ fontSize: '1.85rem' }}>
-        Take This <span style={{ fontSize: '1.25rem', fontFamily: 'Inter', fontStyle: 'italic'}}>Simple</span> Quiz and Find Out!</h1>
+        <h1>Are You Smarter Than a 5th Grader?</h1>
+        <h5 className='seriously'>... are you?</h5>
+        <h1 style={{ fontSize: '1.85rem' }}>
+          Take This <span style={{ fontSize: '1.25rem', fontFamily: 'Inter', fontStyle: 'italic' }}>Simple</span> Quiz and Find Out!
+        </h1>
 
-      <h2 className='cardCount'>Number of Questions: {len}</h2>
-      <Card answer={cardPairs[cardIndex].answer} question={cardPairs[cardIndex].question} difficulty={cardPairs[cardIndex].difficulty} image={cardPairs[cardIndex].image}/>
-      <button onClick={nextCard}>Next Question</button>
+        <h2 className='cardCount'>Number of Questions: {len - 1}</h2>
+        <Card
+          answer={cardPairs[cardIndex].answer}
+          question={cardPairs[cardIndex].question}
+          difficulty={cardPairs[cardIndex].difficulty}
+          image={cardPairs[cardIndex].image}
+          isFlipped={isFlipped}
+          handleCardClick={handleCardClick}
+        />
+        <button onClick={nextCard}>Next Question</button>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

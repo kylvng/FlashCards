@@ -11,10 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./images/classroom.png'); /* Replace 'background.jpg' with your image file path */
-  background-size:cover; /* Adjust based on your image requirements */
-  background-position: center center; /* Adjust based on your image requirements */
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust the last value (0.7) for transparency */
+  background-image: url('./images/classroom.png'); 
+  background-size:cover; 
+  background-position: center center; 
+  background-color: rgba(255, 255, 255, 0.5); 
 }
 
 a {

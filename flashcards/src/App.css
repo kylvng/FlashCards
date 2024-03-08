@@ -1,4 +1,4 @@
-/* App.css */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -27,11 +27,11 @@
 
 .textContainer {
   display: inline-block;
-  padding: 38px; /* Increase the padding */
+  padding: 38px;
   padding-inline: 75px;
-  border: 2px solid rgb(0, 0, 0); /* Black border */
-  background-color: #fff; /* White fill */
-  border-radius: 15%; /* Adjust the radius to control the roundness */
-  color: #000; /* Black text color */
+  border: 2px solid rgb(0, 0, 0); 
+  background-color: #fff; 
+  border-radius: 15%; 
+  color: #000; 
 }
 
