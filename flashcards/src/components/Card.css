@@ -1,0 +1,65 @@
+/* Card.css */
+.Card {
+    width: 350px;
+    height: 200px;
+    border: 1px solid rgb(131, 131, 131);
+    perspective: 1000px;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Card.flipped {
+    transform: rotateX(180deg);
+  }
+  
+  .Card:hover {
+    border-color: #333;
+  }
+  
+  .CardContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: transform 0.3s;
+    position: relative;
+  }
+  
+  .DifficultyLabel {
+    position: absolute;
+    border: 1px solid rgb(116, 115, 115);
+    top: 0.5px;
+    left: 0.5px;
+    background-color: #fff;
+    margin: auto;
+    padding: 5px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .images {
+    width: 70%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    max-height: 70%; /* Set a maximum height for the image */
+  }
+  
+  .CardText {
+    font-style: italic;
+    color: #000;
+  }
+  
+  .Card.flipped .CardContent {
+    transform: rotateX(180deg);
+  }
+  

@@ -1,0 +1,37 @@
+/* App.css */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border: 1px;
+}
+
+.App {
+  text-align: center;
+}
+
+.seriously {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: -10px;
+  margin-bottom: -8px;
+}
+
+.cardCount{
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 60px;
+  margin-bottom: -70px;
+}
+
+.textContainer {
+  display: inline-block;
+  padding: 38px; /* Increase the padding */
+  padding-inline: 75px;
+  border: 2px solid rgb(0, 0, 0); /* Black border */
+  background-color: #fff; /* White fill */
+  border-radius: 15%; /* Adjust the radius to control the roundness */
+  color: #000; /* Black text color */
+}
+
