@@ -69,7 +69,7 @@ ________________________________________________________________________________
 
 Submitted by: **Kyle Vong**
 
-This web app: **Prompts the user to quiz themselves on various brain teasers. Now, we customized the app so the user guess the answer and receive feedback. They also can browse back and forth between the flashcards and shuffle the order.**
+This web app: **Prompts the user to quiz themselves on various brain teasers. Now, we customized the app so the user can guess the answer and receive feedback. They also can browse back and forth between the flashcards and shuffle the order.**
 
 Time spent: **3 hours** hours spent in total
 
