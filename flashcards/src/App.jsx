@@ -95,7 +95,7 @@ function App() {
         />
         <button onClick={handleSubmit}>Submit Guess</button>
 
-        <div>
+        <div className='buttonRow'>
           <button onClick={handlePrevCard}>Back</button>
           <button onClick={handleNextCard}>Next</button>
           <button onClick={handleShuffle}>Shuffle 🔀</button>
