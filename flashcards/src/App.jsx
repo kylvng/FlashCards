@@ -18,7 +18,7 @@ function App() {
   const [userGuess, setUserGuess] = useState('');
   const [borderColor, setBorderColor] = useState('black');
   const [cardPairs, setCardPairs] = useState([
-    { question: 'click me', answer: 'click button', difficulty: 'no me', image: null },
+    { question: 'click me', answer: 'click next ⬇️', difficulty: 'no me', image: null },
     { question: "What comes once in a minute, twice in a moment, but never in a thousand years?", answer: "M", difficulty: "easy", image: m },
     { question: "I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost every person. What am I?", answer: "Pencil lead", difficulty: "easy", image: pencil },
     { question: "I have keys but open no locks. I have space but no room. You can enter, but you can't go inside. What am I?", answer: "Keyboard", difficulty: "easy", image: keyboard },
