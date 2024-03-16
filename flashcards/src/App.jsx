@@ -36,12 +36,16 @@ function App() {
     setFlipped(!isFlipped);
   };
 
+  const handleChangeCard = () => {
+    setUserGuess("");
+    setBorderColor('black');
+  }
+
   const handlePrevCard = () => {
     if (cardIndex > 0) {
       setCardIndex(cardIndex - 1);
       setFlipped(false);
-      setUserGuess("");
-      setBorderColor('black');
+      handleChangeCard();
     }
   };
 
@@ -49,14 +53,14 @@ function App() {
     if (cardIndex < len - 1) {
       setCardIndex(cardIndex + 1);
       setFlipped(false);
-      setUserGuess("");
-      setBorderColor('black');
+      handleChangeCard();
     }
   };
 
   const handleShuffle = () => {
     const shuffledPairs = [...cardPairs].sort(() => Math.random() - 0.5);
     setCardPairs(shuffledPairs);
+    handleChangeCard();
   };
 
   const handleSubmit = () => {
